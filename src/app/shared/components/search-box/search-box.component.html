@@ -1,6 +1,8 @@
+<!-- (keyup.enter)="emitValue(txtValue.value)" -> reemplazo será el debounce -->
 <!-- search -->
 <input type="text"
        class="form-control"
+       [value]="initialValue"
        [placeholder]="placeholder"
-       (keyup.enter)="emitValue(txtValue.value)"
+       (keyup)="onKeyPress(txtValue.value)"
        #txtValue>
